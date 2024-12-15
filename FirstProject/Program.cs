@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace FirstProject
 {
@@ -6,28 +7,37 @@ namespace FirstProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What's your name?");
-            string userName = Console.ReadLine();
-            Console.WriteLine("Hello");
-            Console.WriteLine(userName);
+            string message1;
+            message1 = "some value";
+            Console.WriteLine(message1);
 
-            string someText = "Some text";
-            char jChar = 'j';
-            char jCharUnicode = '\u006A';
+            string message2 = null;
 
-            bool isUserReady = true;
-            bool isUserNotReady = false;
 
-            DateTime now = DateTime.Now;
-            Console.WriteLine(now);
+            string message3 = string.Empty;
 
-            DateTime dateOfBirth = new DateTime(2000, 11, 20);
-            Console.WriteLine(dateOfBirth);
+            string text = "He said: \"Hi\"";
 
-            byte byteNumber = 200;
-            float floatNumber = 1.5F;
-            decimal decimalNumber = 1.5M;
-            double doubleNumber = 1.5;
+            string windowLocation = "c:\\windows";
+
+            string fontFolder = @"c:\windows\fonts";
+
+            string concatenated = string.Concat(text, " to ", "me");
+            string concatenated2 = text + " to " + "me";
+            Console.WriteLine(concatenated);
+            Console.WriteLine(concatenated2);
+
+            string interpolated = $"{text} to me";
+            Console.WriteLine(interpolated);
+
+            StringBuilder sb = new StringBuilder("This");
+            sb.Append(" is");
+            sb.Append(" a");
+            sb.Append(" program.");
+
+            string result = sb.ToString();
+            Console.WriteLine(sb);
+
 
         }
     }
